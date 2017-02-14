@@ -1,0 +1,102 @@
+
+            
+#welcome
+{
+    background-color: #1b1d21;
+    margin-top: 75px;
+    color: aliceblue;
+    text-align: center
+}
+
+#headerBack
+{
+    background-color: #1b1d21;
+    
+}
+
+body
+{
+    background-image: url("signupbackgroundpic.jpg");
+    background-size: 1750px;
+    background-attachment: fixed;
+    background-position: 50% 20%
+    
+    
+}
+
+h3
+{
+    text-align: center
+}
+
+#signUpLabel
+{
+    margin-top: 100px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px
+}
+       
+#signQuestion
+{
+    color: aliceblue;
+    text-align: center
+}
+
+#signBack
+{
+    margin-top: 75px;
+    background-color: #1b1d21;
+    width: 700px;
+    border-radius: 25px;
+    box-shadow: 7px 10px 12px black;
+    
+}
+
+#venuebutton
+{
+    margin-left: 150px;
+    color:aliceblue;
+    background-color: firebrick;
+}
+
+#artistbutton
+{
+    margin-left: 225px;
+    color:aliceblue;
+    background-color:rebeccapurple;
+}
+
+#venueFormBack
+{
+    margin-top: 75px;
+    background-color: #1b1d21;
+    border-radius: 25px;
+    width:500px;
+    color:aliceblue;
+    box-shadow: 7px 10px 12px black;
+        
+}
+
+#artistFormBack
+{
+    margin-top: 75px;
+    background-color: #1b1d21;
+    border-radius: 25px;
+    width:500px;
+    color:aliceblue;
+    box-shadow: 7px 10px 12px black;
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+

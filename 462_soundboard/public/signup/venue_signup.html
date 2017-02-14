@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="mycss.css">
+            
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        </script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">   
+        $("li.dropdown").click(function(){
+             $("nav.navbar" ).toggleClass( "open");
+        });
+        </script>
+        
+        <script>
+            /*=============== POST REQUEST ================*/
+            $(document).ready(function(){
+                    var user,pass,email,websiteLink;
+                    $("#submitButton").click(function(){    
+                        user        = $("#usr").val();
+                        pass        = $("#pwd").val();
+                        email       = $("#email").val();
+                        websiteLink = $("#websiteLink").val();
+                        $.post("http://localhost:3000/venuesignup",{
+                            user: user,
+                            password: pass,
+                            email: email,
+                            websiteLink: websiteLink 
+                            }, function(data){
+                                    if(data ==='done')
+                                    {
+                                        alert("sign up success");
+                                    }
+                                }
+                        );
+                    });
+            });
+        
+        </script>
+    </head>
+<body>
+<!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">MusicMan</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li ><a href="index.html">Home</a></li>
+            <li class="dropdown"></li>  
+            </ul>
+        <!-- nav bar elements-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-music"></span> Browse Artists</a></li>
+        
+          <li><a href = "#"><span class="glyphicon glyphicon-home"></span> Browse Venues</a></li>
+        
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- End of Navigation Bar -->
+
+    <!-- Sign Up Form -->
+<div id="venueFormBack" class="container">
+    <p style="color: aliceblue; text-align:center;font-size:25px">Venue Sign Up Form</p>
+    
+    <div class="form-group">
+        <label for="usr">Venue Name:</label>
+        <input type="text" class="form-control" id="usr">
+        <p><br></p>
+        
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email">
+        <p><br></p>
+        
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+        <p><br></p>
+        
+        
+        <label for="websiteLink">Link to your website:</label>
+        <input type="text" class="form-control" id="websiteLink">
+        <p><br></p>
+        <input id="submitButton" type="submit" class="btn btn-info" value="Submit Button">
+    </div> 
+</div>
+</body>
+</html>
