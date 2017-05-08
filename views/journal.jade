@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	header
+		container(id="branding")
+				img(src="images/SPLogo2.png")
+				nav
+					ul  
+						li
+							a(href='/home')
+								|  Profile
+						li
+							a(href='/soundboard')
+								|  Soundboard
+						li
+							a(href='/signout')
+								|  Logout
+	div.container
+		div.row
+		br
+		br
+		br 
+		br
+        
+		div(ng-controller="jController")
+			p {{name}}
+	<script src="/javascripts/audio/audio2.js"></script>

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	header
+		container(id="branding")
+				img(src="images/SPLogo2.png")
+				nav
+					ul  
+						li
+							a(href='/signup')
+								|  Create an Account
+	br
+	br
+	br
+	div.container
+		div.row
+		form(class="signup-login", action='/login', method='POST')
+			h1(class="signup-login-title") Login
+			input(type="text",name='username',class="signup-login-input",placeholder="What's your username?",required, autofocus)
+			input(type="password", name='password', class="signup-login-input", placeholder="What's your password?", required)
+			input(type="submit", value="Login!", class="signup-login-button")
+			span.clearfix
+				#message
+					if message
+						h1.text-center.error-message #{message}

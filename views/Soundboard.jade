@@ -1,0 +1,81 @@
+extends layout
+block content
+    header
+        container(id="branding")
+                img(src="images/SPLogo2.png")
+                nav
+                    ul  
+                        li
+                                |  Welcome #{user.username}
+                        li
+                            a(href='/signout')
+                                |  Logout
+    div.container
+        br
+        br
+        br 
+        br
+        div(id="soundboard").left-half
+            div.col
+                input(type="submit" value="1" class="soundboard-button" onclick="pA1()")
+                input(type="submit" value="2" class="soundboard-button" onclick="pA2()")
+                input(type="submit" value="3" class="soundboard-button" onclick="pA3()")
+                input(type="submit" value="4" class="soundboard-button" onclick="pA4()")
+            div.col
+                input(type="submit" value="5" class="soundboard-button" onclick="pA5()")
+                input(type="submit" value="6" class="soundboard-button" onclick="pA6()")
+                input(type="submit" value="7" class="soundboard-button" onclick="pA7()")
+                input(type="submit" value="8" class="soundboard-button" onclick="pA8()")
+            div.col
+                input(type="submit" value="9" class="soundboard-button" onclick="pA9()")
+                input(type="submit" value="10" class="soundboard-button" onclick="pA10()")
+                input(type="submit" value="11" class="soundboard-button" onclick="pA11()")
+                input(type="submit" value="12" class="soundboard-button" onclick="pA12()")
+            div.col
+                input(type="submit" value="13" class="soundboard-button" onclick="pA13()")
+                input(type="submit" value="14" class="soundboard-button" onclick="pA14()")
+                input(type="submit" value="15" class="soundboard-button" onclick="pA15()")
+                input(type="submit" value="16" class="soundboard-button" onclick="pA16()")
+        div.right-ish.top_half.backmain
+            div(id="controls").col-1
+                img(id="record" src="images/record1.png" onclick="toggleRecording(this);")
+                br
+                a(id="save" href="#")
+                canvas(id="analyser" width="110" height="15") 
+                canvas(id="wavedisplay" width="100" height="0")
+            div.col-2
+            div.col-3
+                form(action='/SbAdd', method='POST')
+                    input(type="Number",name='tnum',placeholder="Tile Number",required, autofocus)
+                    input(type="submit", value="Save recording to tile?")
+            div.col-4
+                img(src="images/info.png")
+        br
+        div.right-ish.top-half2.backmain1
+            div.col-1
+                input(type="submit" value="Play All" class="my-button1" onclick="pA1();pA2();pA3();pA4();pA5();pA6();pA7();pA8();pA9();pA10();pA11();pA12();pA13();pA14();pA15();pA16()")
+            div.col-2
+            div.col-3
+                div.col
+                    input(type="submit" value="1" class="seq-button" onclick="seq(1)")
+                    input(type="submit" value="2" class="seq-button" onclick="seq(2)")
+                    input(type="submit" value="3" class="seq-button" onclick="seq(3)")
+                    input(type="submit" value="4" class="seq-button" onclick="seq(4)") 
+                div.col
+                    input(type="submit" value="5" class="seq-button" onclick="seq(5)")
+                    input(type="submit" value="6" class="seq-button" onclick="seq(6)")
+                    input(type="submit" value="7" class="seq-button" onclick="seq(7)")
+                    input(type="submit" value="8" class="seq-button" onclick="seq(8)")
+                div.col
+                    input(type="submit" value="9" class="seq-button" onclick="seq(9)")
+                    input(type="submit" value="10" class="seq-button" onclick="seq(10)")
+                    input(type="submit" value="11" class="seq-button" onclick="seq(11)")
+                    input(type="submit" value="12" class="seq-button" onclick="seq(12)")
+                div.col
+                    input(type="submit" value="13" class="seq-button" onclick="seq(13)")
+                    input(type="submit" value="14" class="seq-button" onclick="seq(14)")
+                    input(type="submit" value="15" class="seq-button" onclick="seq(15)")
+                    input(type="submit" value="16" class="seq-button" onclick="seq(16)")
+            div.col-4
+                    input(type="submit" value="PlaySeq" class="my-button1" onclick="playseq()")
+        div.right-ish.bottom-half

@@ -1,0 +1,375 @@
+#welcome
+{
+    background-color: lightblue;
+    opacity:0.5;
+    color: aliceblue;
+    text-align: left;
+    border-radius: 20px;
+    width: 600px;
+    height:200px
+}
+.backmain {
+    background: rgba(109, 201, 255, 0.5);
+    width: 560px;
+    height:225px;
+    border-radius: 20px;
+}
+.backmain1 {
+    background: rgba(109, 201, 255, 0.5);
+    width: 560px;
+    height:225px;
+    border-radius: 20px;
+}
+[class*="col-"] {
+    float: left;
+    padding: 25px;
+}
+.col-1 {width: 70px;}
+.col-2 {width: 10px;}
+.col-3 {width: 150px;}
+.col-4 {width: 10px;}
+.col-5 {width: 70px;}
+.left-half {
+  position: absolute;
+  float:left;
+  left: 0px;
+}
+.left-ish {
+  position: relative;
+  float:left;
+  left: 0px;
+}
+.right-half {
+  position: absolute;
+  float:left;
+  right: 0px;
+  width: 50%;
+}
+.right-ish {
+  position:relative;
+  left: 500px;
+}
+.top-half {
+  position: absolute;
+  height: 50%;
+}
+.top-half2 {
+  position: absolute;
+  height: 25%;
+}
+.bottom-half {
+  position: relative;
+  top:20px
+}
+#profile
+  {
+    margin:auto;
+    background: lightblue;
+    height: 20%;
+    width: 20%;
+    border-radius: 20px;
+    align-items: left;
+  }
+.soundboard-button {
+  border:0;
+  border-radius: 10px;
+  width : 100px;
+  height: 100px; 
+  margin: 2px 2px;
+  font-size: 22px;
+  color: blue;
+  text-align: center;
+  background: yellow;
+}
+.my-button1 {
+  border: 0;
+  background: #0087cc;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: yellow;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+&:active {
+  box-shadow: 0 2px 0 #006599; 
+    transform: translateY(3px);
+}
+}
+.seq-button {
+  border:0;
+  border-radius: 3px;
+  width : 26px;
+  height: 26px; 
+  margin: 1px 1px;
+  font-size: 5px;
+  color: blue;
+  text-align: center;
+  background: yellow;
+}
+#soundboard {
+margin-left: 30px;
+        align-items: center;
+        height: 50%;
+        width: 80%;
+    }
+#sequence {
+    margin-left: 5%;
+        align-items: center;
+        height: 5%;
+        width: 8%;
+    }
+logo{
+  padding-top:5;
+}
+body{
+  font: 15px/1.5 Times New Roman, Helvetica, sana-serif;
+  padding:0;
+  margin:0;
+  background-image: url("../images/SBmain.jpg"); 
+  background-size: 1350px;
+  background-attachment: fixed;
+  background-position: 0px 0px; 
+}
+container {
+  background-image: url("../images/WPtexture.jpg");
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+}
+.container1{
+  display: flex
+}
+ul{
+    margin:0;
+    padding:0;
+}
+header h1{
+    font-size: 25px;
+    margin-left: 20px;
+}
+header a{
+    color: #000000;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+header li{
+    display:inline;
+    padding:0 10px 0 10px;
+}
+header #branding{
+    float:left;
+  background-image: url("../images/WPtexture.jpg");
+}
+header nav{
+    float:right;
+  margin-bottom:10px;
+  margin-right:20px;
+  margin-top:18px;
+}
+header .highlight, header .current a{
+    color: blue;
+    font-weight:bold;
+}
+#a
+{
+    margin-top: 75px;
+    background-color: #35424a;
+    border: 30px;
+    width:500px;
+    color:#ffffff;
+    box-shadow: 7px 10px 12px black;   
+}
+#trigger h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+-------------
+@import '../../shared/mixins',
+        '../../shared/reset',
+        '../../shared/about-light';
+/*
+ * Copyright (c) 2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+body {
+    font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #404040;
+    background: #596778;
+}
+.signup-login {
+  position: relative;
+  margin: 50px auto;
+  width: 280px;
+  padding: 33px 25px 29px;
+  background: dodgerblue;
+  border-radius: 5px;
+  @include box-shadow(0 1px 5px rgba(black, .25));
+  
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: inherit;
+    border-bottom: 1px solid #d2d2d2;
+    border-radius: 4px;
+  }
+  &:after {
+    bottom: 3px;
+    border-color: #dcdcdc;
+  }
+}
+.signup-login-title {
+  margin: -15px -15px 25px;
+  padding: 10px 25px;
+  line-height: 35px;
+  font-size: 26px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  text-shadow: 0 1px rgba(white, .75);
+  background: lightblue;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #c4e17f;
+    border-radius: 5px 5px 0 0;
+    @include linear-gradient(left,
+                             #c4e17f, #c4e17f 12.5%,
+                             #f7fdca 12.5%, #f7fdca 25%,
+                             #fecf71 25%, #fecf71 37.5%,
+                             #f0776c 37.5%, #f0776c 50%,
+                             #db9dbe 50%, #db9dbe 62.5%,
+                             #c49cde 62.5%, #c49cde 75%,
+                             #669ae1 75%, #669ae1 87.5%,
+                             #62c2e4 87.5%, #62c2e4);
+  }
+}
+input {
+  font-family: inherit;
+  color: inherit;
+  @include box-sizing(border-box);
+}
+.signup-login-input {
+  width: 80%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  @include box-shadow(inset 0 -2px #ebebeb);
+  &:focus {
+    border-color: #62c2e4;
+    outline: none;
+    @include box-shadow(inset 0 -2px #62c2e4);
+  }
+  .lt-ie9 & { line-height: 48px; }
+}
+.signup-login-button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 54px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(black, .25);
+  background: Blue;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  @include box-shadow(inset 0 -2px #d76b60);
+  &:active {
+    top: 1px;
+    outline: none;
+    @include box-shadow(none);
+  }
+}
+    html { overflow: auto; }
+  
+    canvas { 
+        display: inline-block; 
+        background: #202020; 
+        width: 100;
+        height: 10x;
+        box-shadow: 0px 0px 10px blue;
+    }
+    #controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 20%;
+        width: 100%;
+    }
+    #record { height: 110px; }
+    #record.recording { 
+        background: red;
+        background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+        background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+        background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    }
+    #save, #save img { height: 10vh; }
+    #save { opacity: 0.25;}
+    #save[download] { opacity: 1;}
+    #viz {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    justify-content: space-around;
+    }
+    @media (orientation: landscape) {
+        body { flex-direction: row;}
+        #controls { flex-direction: column; height: 100%; width: 10%;}
+        #viz { height: 40%; width: 60%; margin-left: 20%;}
+    }
+td {
+    font-size: 13px;
+    display: table-cell;
+    vertical-align: center;
+}
+:-moz-placeholder { color: #ccc; font-weight: 300; }
+::-moz-placeholder { color: #ccc; opacity: 1; font-weight: 300; }
+::-webkit-input-placeholder { color: #ccc; font-weight: 300; }
+:-ms-input-placeholder { color: #ccc; font-weight: 300; }
+::-moz-focus-inner { border: 0; padding: 0; }
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
